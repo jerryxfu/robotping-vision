@@ -12,7 +12,10 @@ class Cam(threading.Thread):
 
     def run(self):
         while self.running:
-            ok, f = self.cap.read()
+            # Flush the buffer: grab (decode-skip) several frames, keep newest.
+            for _ in range(5):
+                self.cap.grab()
+            ok, f = self.cap.retrieve()
             if ok:
                 self.frame, self.stamp = f, time.perf_counter()
 

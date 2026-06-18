@@ -93,5 +93,5 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "numpy", specifier = ">=2.4.6" },
-    { name = "opencv-python", specifier = ">=4.13.0.92" },
+    { name = "opencv-python", specifier = ">=4.7" },
 ]
