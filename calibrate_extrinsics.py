@@ -8,7 +8,7 @@ same board placement. The board's origin becomes world origin.
 Paste your per-camera intrinsics (K, dist) below first.
 
 Usage:
-    python calibrate_extrinsics_charuco.py \
+    python calibrate_extrinsics.py \
         --url0 rtsp://172.20.10.1:554/stream \
         --url1 rtsp://172.20.10.2:554/stream
 

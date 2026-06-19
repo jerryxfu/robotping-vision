@@ -26,8 +26,8 @@ class Cam(threading.Thread):
 
 # put your two phone URLs here
 urls = [
-    ("rtsp://172.20.10.1:554/stream", "cam0"),
-    ("rtsp://172.20.10.2:554/stream", "cam1"),
+    ("rtsp://172.20.10.3:554/stream", "cam0"),
+    ("rtsp://172.20.10.4:554/stream", "cam1"),
 ]
 
 cams = [Cam(u, n) for u, n in urls]
