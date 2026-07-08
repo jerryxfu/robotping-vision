@@ -9,8 +9,8 @@ down. Both cameras must be mounted in their final positions before you
 start, and must not move either.
 
 Run once per camera with its URL and an id:
-    python calibrate_extrinsics_single.py --url rtsp://172.20.10.1:554/stream --cam 0
-    python calibrate_extrinsics_single.py --url rtsp://172.20.10.2:554/stream --cam 1
+    python calibrate_extrinsics_single.py --url rtsp://172.20.10.3:554/stream --cam 0
+    python calibrate_extrinsics_single.py --url rtsp://172.20.10.4:554/stream --cam 1
 
 Each run appends its result to extrinsics.py which the fusion script loads.
 SPACE = solve & save pose   q = quit
@@ -37,19 +37,19 @@ DICT = cv2.aruco.DICT_4X4_50
 # Fill in both. cam0 confirmed; paste cam1's real numbers.
 INTRINSICS = {
     0: {
-        "K": np.array([[505.34254716, 0., 239.06364843],
-                       [0., 505.08527838, 321.69757632],
+        "K": np.array([[492.49721348, 0., 238.35910301],
+                       [0., 492.63279911, 324.71922652],
                        [0., 0., 1.]]),
-        "dist": np.array([[2.20202595e-01, -1.32506763e+00, 1.05424188e-04,
-                           1.42208007e-04, 2.08309395e+00]]),
+        "dist": np.array([[1.60704667e-01, -7.94847520e-01, 1.02455418e-03, -4.04626847e-04,
+                           1.06560000e+00]]),
     },
     1: {
         # TODO: paste camera 1's real K and dist here
-        "K": np.array([[510.76158671, 0., 240.76067209],
-                       [0., 510.4488106, 322.07845801],
+        "K": np.array([[496.33199581, 0., 239.90805986],
+                       [0., 497.5526016, 326.47298346],
                        [0., 0., 1.]]),
-        "dist": np.array([[2.04017309e-01, -1.48397188e+00, 3.99659594e-04, 3.97122613e-05,
-                           2.62261143e+00]]),
+        "dist": np.array([[2.57753368e-01, -1.78001331e+00, 1.19580866e-03, -4.28233049e-04,
+                           3.31371106e+00]]),
     },
 }
 # ------------------------------

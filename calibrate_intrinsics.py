@@ -8,7 +8,7 @@ Board (from calib.io): 11 cols x 8 rows squares, DICT_4X4, 15mm checker.
 MEASURE your on-screen square with a ruler and set SQUARE_MM below.
 
 Usage:
-    python calibrate_intrinsics_charuco.py --url rtsp://172.20.10.1:554/stream
+    python calibrate_intrinsics.py --url rtsp://172.20.10.1:554/stream
 
 SPACE = capture view (when board detected)
 c     = compute & print K + dist
